@@ -1,0 +1,59 @@
+<!--
+ * @Author: Frank Chu
+ * @Date: 2023-01-22 21:10:59
+ * @LastEditors: Frank Chu
+ * @LastEditTime: 2023-01-22 23:36:14
+ * @FilePath: /fullstackopen/part0/beginner-html-site/index.html
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by Frank Chu, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>My test page</title>
+        <link href="styles/style.css" rel="stylesheet" />
+        <link 
+            href="https://fonts.googleapis.com/css?family=Open+Sans"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Mozilla is cool</h1>
+        <img src="./images/firefox-icon.png" alt="My test image" />
+        
+        <p class="editor-note">My cat is <strong>very</strong> grumpy</p>
+        
+        <p>At Mozilla, we're a global community of</p>
+        
+        <ul>
+            <li>Technologists</li>
+            <li>Thinkers</li>
+            <li>Builders</li>
+        </ul>
+        
+        <p>Working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+        
+        <p>Read the <a href="https://mozilla.org/en-us/about/manifesto">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
+
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="user_name" />
+                </li>
+                <li>
+                    <label for="mail">E-mail</label>
+                    <input type="email" id="mail" name="user_email" />
+                </li>
+                <li>
+                    <label for="msg">Message</label>
+                    <textarea id="msg" name="user_message">by default this element is filled with this text</textarea>
+                </li>
+                <li class="button">
+                    <button type="submit">Send your message</button>
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>
