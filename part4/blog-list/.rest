@@ -1,0 +1,23 @@
+POST http://localhost:3003
+Content-Type: application/json
+
+{
+    "title": "",
+    "author": "Matti Luukkainen",
+    "url": "https://fullstackopen.com/en/part4/structure_of_backend_application_introduction_to_testing",
+    "likes": 20
+}
+
+### 
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "another Part 4 - Testing Express servers, user administration",
+    "author": "Matti Luukkainen",
+    "url": "https://fullstackopen.com/en/part4/structure_of_backend_application_introduction_to_testing",
+    "likes": 20
+}
+
+### 
+GET http://localhost:3003/api/blogs

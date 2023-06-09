@@ -2,7 +2,7 @@
  * @Author: Frank Chu
  * @Date: 2023-01-29 14:25:46
  * @LastEditors: Frank Chu
- * @LastEditTime: 2023-01-29 16:08:18
+ * @LastEditTime: 2023-02-04 06:58:20
  * @FilePath: /fullstackopen/part2/lecture/src/services/note.js
  * @Description:
  * 
@@ -10,7 +10,7 @@
  */
 
 import axios from 'axios';
-const baseUrl = 'http://localhost:3001/notes';
+const baseUrl = 'http://localhost:3001/api/notes';
 
 const getAll = async () => {
     // We could take our implementation a step further. When the App component uses the functions, 

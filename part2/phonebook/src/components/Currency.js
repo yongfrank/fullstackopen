@@ -2,8 +2,8 @@
  * @Author: Frank Chu
  * @Date: 2023-01-30 22:05:02
  * @LastEditors: Frank Chu
- * @LastEditTime: 2023-01-30 22:29:41
- * @FilePath: /fullstackopen/part2/phonebook/src/components/currency.js
+ * @LastEditTime: 2023-02-04 11:14:33
+ * @FilePath: /fullstackopen/part2/phonebook/src/components/Currency.js
  * @Description: 
  * 
  * Copyright (c) 2023 by Frank Chu, All Rights Reserved. 
@@ -11,7 +11,6 @@
 
 import { useState, useEffect } from "react"
 import ServiceOfCurrency from '../services/CurrencyConvert'
-import axios from "axios"
 
 const Currency = () => {
     const [currency, setCurrency] = useState('')
@@ -30,6 +29,16 @@ const Currency = () => {
                 console.log('error')
             });
     }
+
+    const Response = ({responseData}) => {
+        if (responseData.USD) {
+            return (
+                <pre>
+                    {JSON.stringify(responseData, null, 4)}
+                </pre>
+            )
+        }
+    }
     return (
         <>
             <div>
@@ -38,9 +47,7 @@ const Currency = () => {
                     <button type="submit">Convert</button>
                 </form>
             </div>
-            <pre>
-                {JSON.stringify(responseData, null, 4)}
-            </pre>
+            <Response responseData={responseData}/>
         </>
     )
 }

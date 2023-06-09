@@ -2,7 +2,7 @@
  * @Author: Frank Chu
  * @Date: 2023-01-27 11:27:58
  * @LastEditors: Frank Chu
- * @LastEditTime: 2023-01-31 12:19:42
+ * @LastEditTime: 2023-02-07 13:45:43
  * @FilePath: /fullstackopen/part2/phonebook/src/App.js
  * @Description: 
  * 
@@ -57,7 +57,7 @@ function App() {
             setNewNumber('')
           })
           .catch(error => {
-            setNotificationMessage({isError: true, message: `Information of ${changedPerson.name} has already been removed from server}`})
+            setNotificationMessage({isError: true, message: `${error.response.data.error}`})
             setTimeout(() => {
               setNotificationMessage({isError: false, message: null})
             }, 5000)
@@ -91,6 +91,13 @@ function App() {
         }, 5000)
         setNewName('')
         setNewNumber('')
+      })
+      .catch(error => {
+        setNotificationMessage({isError: true, message: `${error.response.data.error}`})
+        
+        setTimeout(() => {
+          setNotificationMessage({isError: false, message: null})
+        }, 5000)
       })
   }
 
